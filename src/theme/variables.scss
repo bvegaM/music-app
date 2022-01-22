@@ -4,20 +4,28 @@
 /** Ionic CSS Variables **/
 :root {
   /** fisrt-color **/
-  --ion-color-first: #FFF8E5;
-  --ion-color-first-rgb: 255,248,229;
+  --ion-color-first: #161622;
+  --ion-color-first-rgb: 18, 18, 34;
 
   /** second-color **/
-  --ion-color-second: #00A19D;
-  --ion-color-second-rgb: 0,161,157;
+  --ion-color-second: #FBC390;
+  --ion-color-second-rgb: 251, 196, 144;
 
   /** third-color **/
-  --ion-color-third: #FFB344;
-  --ion-color-third-rgb: 255,179,68;
+  --ion-color-third: #E7D6CF;
+  --ion-color-third-rgb: 231, 214, 207;
 
   /** fourth-color **/
-  --ion-color-fourth: #E05D5D;
-  --ion-color-fourth-rgb: 224,93,93;
+  --ion-color-fourth: #dcf30e;
+  --ion-color-fourth-rgb: 220, 243, 14;
+
+  /** fifth-color **/
+  --ion-color-fifth: #EFF0F2;
+  --ion-color-fifth-rgb: 239, 240, 242;
+
+  /** sixth-color **/
+  --ion-color-sixth: #1ED760;
+  --ion-color-sixth-rgb: 30, 215, 96;
 
   /** success **/
   --ion-color-success: #2dd36f;
@@ -66,4 +74,53 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+}
+
+@font-face {
+  font-family: "Poppins Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins SemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins ExtraBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/Poppins-Thin.ttf");
 }

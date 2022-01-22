@@ -1,0 +1,6 @@
+{
+	"appId": "com.music.uets",
+	"appName": "music",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

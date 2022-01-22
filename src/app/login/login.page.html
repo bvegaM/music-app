@@ -1,0 +1,42 @@
+<ion-content>
+  <figure class="ion-text-center figure-logo">
+    <ion-icon name="headset" class="icon-logo"></ion-icon>
+    <h1 class="logo-title">Inicia Sesión</h1>
+  </figure>
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)" class="form">
+    <div class="validation-error">
+      <ng-container *ngFor="let validation of validationMessages.email">
+        <div
+          *ngIf="loginForm.get('email').hasError(validation.type) && (loginForm.get('email').dirty||loginForm.get('email').touched)"
+        >
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="form-input">
+      <ion-input
+        formControlName="email"
+        placeholder="ingrese su correo"
+        class="form-input-data"
+      ></ion-input>
+    </ion-item>
+    <div class="validation-error">
+      <ng-container *ngFor="let validation of validationMessages.password">
+        <div
+          *ngIf="loginForm.get('password').hasError(validation.type) && (loginForm.get('password').dirty||loginForm.get('password').touched)"
+        >
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="form-input">
+      <ion-input
+        formControlName="password"
+        type="password"
+        placeholder="ingrese contraseña"
+        class="form-input-data"
+      ></ion-input>
+    </ion-item>
+    <ion-button [disabled]="!loginForm.valid" type="submmit" class="login-button">Iniciar sesión</ion-button>
+  </form>
+</ion-content>
