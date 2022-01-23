@@ -38,5 +38,8 @@
       ></ion-input>
     </ion-item>
     <ion-button [disabled]="!loginForm.valid" type="submmit" class="login-button">Iniciar sesión</ion-button>
+    <div>
+      <span class="register-text">¿No tienes cuenta? <a (click)="registerPage()">Registrate aquí</a></span>
+    </div>
   </form>
 </ion-content>

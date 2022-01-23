@@ -6,7 +6,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NavController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
+import { Storage } from '@ionic/storage-angular';
 import { AuthenticateService } from '../services/authenticate.service';
 
 @Component({
@@ -17,7 +18,7 @@ import { AuthenticateService } from '../services/authenticate.service';
 export class LoginPage implements OnInit {
   loginForm: FormGroup;
   validationMessages = {
-    email:[
+    email: [
       {
         type: 'required',
         message: 'Email is required.',
@@ -25,9 +26,9 @@ export class LoginPage implements OnInit {
       {
         type: 'pattern',
         message: 'Please enter a valid email.',
-      }
+      },
     ],
-    password:[
+    password: [
       {
         type: 'required',
         message: 'Password is required.',
@@ -35,13 +36,19 @@ export class LoginPage implements OnInit {
       {
         type: 'minlength',
         message: 'Password must be at least 5 characters long.',
-      }
-    ]
+      },
+    ],
   };
 
   errorMessage = '';
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthenticateService,private router: Router) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthenticateService,
+    private router: Router,
+    private alert: AlertController,
+    private storage: Storage,
+  ) {
     this.loginForm = this.formBuilder.group({
       email: new FormControl(
         '',
@@ -57,12 +64,27 @@ export class LoginPage implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  async ngOnInit() {
+    await this.storage.create();
+  }
 
-  loginUser(credentials){
-    this.authService.loginUser(credentials).then(res => {
+  loginUser(credentials) {
+    this.authService.loginUser(credentials).then((res) => {
       this.errorMessage = '';
+      this.storage.set('isUserLoggedIn', true);
       this.router.navigate(['/home']);
+    }).catch(async (err) => {
+      console.log(err);
+      const alert = this.alert.create({
+        header: 'Error',
+        message: 'Creedenciales Incorrectas',
+        buttons: ['OK'],
+      });
+      (await alert).present();
     });
+  }
+
+  registerPage() {
+    this.router.navigate(['/register']);
   }
 }
