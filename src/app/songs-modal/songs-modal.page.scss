@@ -1,0 +1,69 @@
+
+ion-toolbar{
+  --background: var(--ion-color-first);
+}
+
+.icon-close{
+  color: var(--ion-color-sixth);
+}
+
+ion-item{
+  justify-content: space-between;
+  font-size: 20px;
+  font-family: 'Poppins Regular';
+}
+
+ion-content{
+  --background: var(--ion-color-first);
+}
+
+
+.info-artist{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  --background: var(--ion-color-first);
+}
+
+.info-artist ion-avatar{
+  height: 140px;
+  width: 40%;
+  margin-top: 50px;
+}
+
+.info-artist ion-label{
+  font-size: 20px;
+  font-family: 'Poppins Regular';
+  margin-top: 10px;
+  --color: var(--ion-color-fifth);
+}
+
+.info-artist ion-label p{
+  color: var(--ion-color-fifth);
+}
+
+ion-avatar img{
+  width: 90px;
+  height: 90px;
+}
+
+ion-list{
+  --background: var(--ion-color-first);
+}
+
+ion-list ion-item{
+  --background: var(--ion-color-first);
+  --color: var(--ion-color-fifth);
+  font-family: 'Poppins Regular';
+  width: 100%;
+}
+
+ion-list ion-item p{
+  color: var(--ion-color-fifth);
+}
+
+ion-list ion-item ion-label{
+  font-size: 15px;
+  font-family: 'Poppins Regular';
+  --color: var(--ion-color-fifth);
+}

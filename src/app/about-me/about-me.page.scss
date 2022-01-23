@@ -1,0 +1,40 @@
+ion-menu-button {
+  color: var(--ion-color-sixth);
+}
+
+ion-toolbar {
+  --background: var(--ion-color-first);
+  --color: var(--ion-color-fifth);
+}
+
+ion-content {
+  --background: var(--ion-color-first);
+  --color: var(--ion-color-fifth);
+  font-family: 'Poppins Regular';
+}
+
+ion-item{
+  display: flex;
+  --background: var(--ion-color-first);
+  --color: var(--ion-color-fifth);
+  margin: 250px 0;
+  text-align: center;
+}
+
+ion-item ion-avatar{
+  height: 140px;
+  width: 40%;
+  margin-top: 50px;
+}
+
+.info-artist ion-label{
+  font-size: 20px;
+  font-family: 'Poppins Regular';
+  margin-top: 10px;
+  --color: var(--ion-color-fifth);
+}
+
+ion-avatar img{
+  width: 90px;
+  height: 90px;
+}

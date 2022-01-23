@@ -4,33 +4,52 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Bienvenido</ion-list-header>
-
-          <ion-menu-toggle
-            auto-hide="false"
-            *ngFor="let p of appPages; let i = index"
-          >
-            <ion-item lines="none">
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="goHome()" lines="none">
               <ion-icon
                 slot="start"
-                [ios]="p.icon + '-outline'"
-                [md]="p.icon + '-sharp'"
+                name="home"
+                ios="home-outline"
+                md="home-sharp"
                 class="icon-logo"
               ></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+              <ion-label>Home</ion-label>
             </ion-item>
           </ion-menu-toggle>
-          <ion-menu-toggle
-            auto-hide="false"
-            *ngFor="let p of logOutPage; let i = index"
-          >
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="goSearch()" lines="none">
+              <ion-icon
+                slot="start"
+                name="search"
+                ios="search-outline"
+                md="search-sharp"
+                class="icon-logo"
+              ></ion-icon>
+              <ion-label>Buscador</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="goInfo()" lines="none">
+              <ion-icon
+                slot="start"
+                name="information"
+                ios="information-outline"
+                md="information-sharp"
+                class="icon-logo"
+              ></ion-icon>
+              <ion-label>Acerca de</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
             <ion-item (click)="logout()" lines="none">
               <ion-icon
                 slot="start"
-                [ios]="p.icon + '-outline'"
-                [md]="p.icon + '-sharp'"
+                name="log-out"
+                ios="log-out-outline"
+                md="log-out-sharp"
                 class="icon-logo"
               ></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+              <ion-label>Logout</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>

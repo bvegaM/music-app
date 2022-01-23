@@ -1,0 +1,35 @@
+ion-menu-button {
+  color: var(--ion-color-sixth);
+}
+
+ion-toolbar {
+  --background: var(--ion-color-first);
+  --color: var(--ion-color-fifth);
+}
+
+ion-content {
+  --background: var(--ion-color-first);
+  --color: var(--ion-color-fifth);
+  font-family: 'Poppins Regular';
+}
+
+ion-scroll-view{
+  --background: var(--ion-color-first);
+  --color: var(--ion-color-fifth);
+}
+
+ion-item{
+  --background: var(--ion-color-first);
+  --color: var(--ion-color-fifth);
+  font-family: 'Poppins Regular';
+}
+
+.icon-song{
+  color: var(--ion-color-sixth);
+}
+
+ion-searchbar{
+  --background: var(--ion-color-fifth);
+  --color: var(--ion-color-first);
+  font-family: 'Poppins Regular';
+}

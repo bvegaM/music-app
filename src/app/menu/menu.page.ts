@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
+import { HomePage } from '../home/home.page';
 
 @Component({
   selector: 'app-menu',
@@ -9,20 +10,10 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-
-  public appPages = [
-    { title: 'Home', url: '', icon: 'home'},
-    { title: 'Modo Sport', url: '/folder/Outbox', icon: 'bicycle'},
-  ];
-
-  public logOutPage = [
-    { title: 'Log out', url: '/folder/Favorites', icon: 'log-out'},
-  ];
-
   constructor(
     private menuController: MenuController,
     private router: Router,
-    private storage: Storage
+    private storage: Storage,
   ) {}
 
   ngOnInit() {}
@@ -30,5 +21,17 @@ export class MenuPage implements OnInit {
   logout() {
     this.storage.remove('isUserLoggedIn');
     this.router.navigate(['/login']);
+  }
+
+  goHome() {
+    this.router.navigate(['menu/home']);
+  }
+
+  goSearch() {
+    this.router.navigate(['menu/search']);
+  }
+
+  goInfo() {
+    this.router.navigate(['menu/aboutme']);
   }
 }

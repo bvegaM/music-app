@@ -6,3 +6,33 @@ ion-toolbar {
   --background: var(--ion-color-first);
   --color: var(--ion-color-fifth);
 }
+
+ion-content{
+  --background: var(--ion-color-first);
+  --color: var(--ion-color-fifth);
+}
+
+ion-content h1{
+  display: flex;
+  padding: 0px 0px 0px 25px;
+  font-family: 'Poppins Medium';
+}
+
+ion-content ion-avatar{
+  height: 140px;
+  width: 90%;
+}
+
+ion-avatar img{
+  width: 90px;
+  height: 90px;
+}
+
+ion-avatar span{
+  font-size: 11px;
+  font-family: 'Poppins Regular';
+}
+
+.squared-avatar{
+  --border-radius: 0;
+}

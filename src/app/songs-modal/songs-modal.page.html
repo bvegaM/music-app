@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="selectSong('')">
+        <ion-icon slot="icon-only" name="close" class="icon-close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item class="info-artist" lines="none">
+    <ion-avatar slot="start">
+      <img src={{image}} />
+    </ion-avatar>
+    <ion-label>
+      <h2>{{artist}}</h2>
+      <h3>Seguidores</h3>
+      <p>{{followers}}</p>
+    </ion-label>
+  </ion-item>
+  <ion-list>
+    <ion-item *ngFor="let song of songs; index as i;" (click)="selectSong(song)" lines="none">
+      <ion-avatar slot="start">
+        {{i + 1}}
+      </ion-avatar>
+      <ion-label>
+        <h2>{{song.name}}</h2>
+        <p>duración: {{millisToMinutesAndSeconds(song.duration_ms)}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

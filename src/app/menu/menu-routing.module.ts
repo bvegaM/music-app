@@ -13,8 +13,26 @@ const routes: Routes = [
         loadChildren: () =>
           import('../home/home.module').then((m) => m.HomePageModule),
       },
-    ]
-  }
+      {
+        path: 'search',
+        loadChildren: () =>
+          import('../search/search.module').then((m) => m.SearchPageModule),
+      },
+      {
+        path: 'aboutme',
+        loadChildren: () =>
+          import('../about-me/about-me.module').then(
+            (m) => m.AboutMePageModule
+          ),
+      },
+      ,
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
+    ],
+  },
 ];
 
 @NgModule({
