@@ -72,7 +72,8 @@ export class LoginPage implements OnInit {
     this.authService.loginUser(credentials).then((res) => {
       this.errorMessage = '';
       this.storage.set('isUserLoggedIn', true);
-      this.router.navigate(['/home']);
+      //navigate with transition animation to home page
+      this.router.navigate(['/menu/home']);
     }).catch(async (err) => {
       console.log(err);
       const alert = this.alert.create({
